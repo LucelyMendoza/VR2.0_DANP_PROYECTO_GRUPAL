@@ -18,6 +18,7 @@ struct MapaView: View {
                         .edgesIgnoringSafeArea(.all)
                     
                     Canvas { context, size in
+                        // Define tus áreas de galería como rectángulos u otras formas
                         let gallery1Rect = CGRect(x: screenWidth * 0.1, y: screenHeight * 0.9, width: screenWidth * 0.5, height: screenHeight * 0.08)
                         let gallery2Rect = CGRect(x: screenWidth * 0.1, y: screenHeight * 0.7, width: screenWidth * 0.15, height: screenHeight * 0.2)
                         let gallery3Rect = CGRect(x: screenWidth * 0.25, y: screenHeight * 0.7, width: screenWidth * 0.35, height: screenHeight * 0.08)
@@ -73,122 +74,9 @@ struct MapaView: View {
                         context.draw(Text("LA SALA").font(textStyle).foregroundColor(textColor), at: CGPoint(x: galleryLaSalaRect.midX, y: galleryLaSalaRect.midY))
                         context.draw(Text("GALERÍA VII").font(textStyle).foregroundColor(textColor), at: CGPoint(x: gallery7Rect.midX, y: gallery7Rect.midY))
                     }
-                    
-                    //Portón
-                    Image("porton")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.8, height: screenHeight * 0.09) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.675, y: screenHeight * 0.94)
-                    
-                    //Puerta galeria 1
-                    Image("door")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.02) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.65, y: screenHeight * 0.09)
-                        .rotationEffect(.degrees(180))
-                    
-                    //Puerta galeria 2
-                    Image("door 1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.02) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.24, y: screenHeight * 0.83)
-                   
-                    //Puertas galeria 3
-                    Image("door")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.02) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.4, y: screenHeight * 0.77)
-                    
-                    Image("door 3")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.02) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.4, y: screenHeight * 0.71)
-                    
-                    //Puerta galeria 4
-                    Image("door 2")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.02) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.76, y: screenHeight * 0.83)
-                    
-                    //Puerta galeria 5
-                    Image("door 2")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.02) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.76, y: screenHeight * 0.74)
-                    
-                    //Puerta galeria 6
-                    Image("door 1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.02) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.24, y: screenHeight * 0.5)
-                    
-                    //Puerta La Sala
-                    Image("door")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.02) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.4, y: screenHeight * 0.39)
-                    
-                    //Puerta galería 7
-                    Image("door")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.02) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.65, y: screenHeight * 0.11)
-                    
-                    //prohibido entrar sala
-                    Image("prohibido")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.05) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.65, y: screenHeight * 0.077)
-                    
-                    //Puerta sala sin pasada
-                    Image("door 2")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.02) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.76, y: screenHeight * 0.49)
-                    //prohibido entrar sala
-                    Image("prohibido")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.05) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.83, y: screenHeight * 0.49)
-                    
-                    //baños entrada 1
-                    Image("banios")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.3, height: screenHeight * 0.03) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.83, y: screenHeight * 0.23)
-                    
-                    //baños entrada 2
-                    Image("banios 1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.3, height: screenHeight * 0.03) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.83, y: screenHeight * 0.19)
-                    
-                    //prohibido entrar sala
-                    Image("prohibido")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.05) // Hacerla más pequeña
-                        .position(x: screenWidth * 0.18, y: screenHeight * 0.22)
-                    
                     .frame(width: screenWidth, height: screenHeight)
                 }
             }
         }
     }
-
 

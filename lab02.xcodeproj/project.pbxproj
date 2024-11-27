@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D65B2F52CF7B005006467ED /* PaintingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D65B2F42CF7B004006467ED /* PaintingsService.swift */; };
+		7D65B2F72CF7B015006467ED /* PaintingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D65B2F62CF7B015006467ED /* PaintingDetailView.swift */; };
+		7D65B2F92CF7B03D006467ED /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D65B2F82CF7B03D006467ED /* Painting.swift */; };
+		7D65B2FB2CF7B0E5006467ED /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D65B2FA2CF7B0E5006467ED /* ImagePicker.swift */; };
 		8CA22B7F2CB6D3A1003DB6B3 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA22B7E2CB6D3A1003DB6B3 /* QRView.swift */; };
-		F922C0222CE489BE004BC999 /* Galeria1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F922C0212CE489BE004BC999 /* Galeria1View.swift */; };
 		F9B713852CAC8CD8007C719D /* lab02App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B713842CAC8CD8007C719D /* lab02App.swift */; };
 		F9B713872CAC8CD8007C719D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B713862CAC8CD8007C719D /* ContentView.swift */; };
 		F9B713892CAC8CDC007C719D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9B713882CAC8CDC007C719D /* Assets.xcassets */; };
@@ -43,8 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D65B2F42CF7B004006467ED /* PaintingsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaintingsService.swift; path = ../../../../../Desktop/PROYECTO_DANP_VR1_GRUPAL/lab02/Vistas/PaintingsService.swift; sourceTree = "<group>"; };
+		7D65B2F62CF7B015006467ED /* PaintingDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaintingDetailView.swift; path = ../../../../../Desktop/PROYECTO_DANP_VR1_GRUPAL/lab02/Vistas/PaintingDetailView.swift; sourceTree = "<group>"; };
+		7D65B2F82CF7B03D006467ED /* Painting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Painting.swift; path = ../../../../../Desktop/PROYECTO_DANP_VR1_GRUPAL/lab02/Vistas/Painting.swift; sourceTree = "<group>"; };
+		7D65B2FA2CF7B0E5006467ED /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePicker.swift; path = ../../../../../Desktop/PROYECTO_DANP_VR1_GRUPAL/lab02/Vistas/ImagePicker.swift; sourceTree = "<group>"; };
 		8CA22B7E2CB6D3A1003DB6B3 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
-		F922C0212CE489BE004BC999 /* Galeria1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galeria1View.swift; sourceTree = "<group>"; };
 		F9B713812CAC8CD8007C719D /* lab02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B713842CAC8CD8007C719D /* lab02App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lab02App.swift; sourceTree = "<group>"; };
 		F9B713862CAC8CD8007C719D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,11 +102,14 @@
 				F9B713862CAC8CD8007C719D /* ContentView.swift */,
 				F9C1CE402CAF224E00653ABD /* MapaView.swift */,
 				F9C1CE3E2CAF222900653ABD /* PinturasView.swift */,
+				7D65B2F42CF7B004006467ED /* PaintingsService.swift */,
+				7D65B2F62CF7B015006467ED /* PaintingDetailView.swift */,
 				F9B713B32CAC9037007C719D /* CreateAccountView.swift */,
+				7D65B2F82CF7B03D006467ED /* Painting.swift */,
 				F9B713B12CAC9009007C719D /* HomeView.swift */,
+				7D65B2FA2CF7B0E5006467ED /* ImagePicker.swift */,
 				F9B713AF2CAC8DC2007C719D /* LoginView.swift */,
 				8CA22B7E2CB6D3A1003DB6B3 /* QRView.swift */,
-				F922C0212CE489BE004BC999 /* Galeria1View.swift */,
 			);
 			path = Vistas;
 			sourceTree = "<group>";
@@ -296,15 +305,18 @@
 			files = (
 				F9B713B02CAC8DC2007C719D /* LoginView.swift in Sources */,
 				F9B713B22CAC9009007C719D /* HomeView.swift in Sources */,
-				F922C0222CE489BE004BC999 /* Galeria1View.swift in Sources */,
 				F9C1CE3B2CAF167900653ABD /* UserModel.xcdatamodeld in Sources */,
+				7D65B2FB2CF7B0E5006467ED /* ImagePicker.swift in Sources */,
 				8CA22B7F2CB6D3A1003DB6B3 /* QRView.swift in Sources */,
 				F9B713872CAC8CD8007C719D /* ContentView.swift in Sources */,
 				F9B713852CAC8CD8007C719D /* lab02App.swift in Sources */,
 				F9C1CE3D2CAF17E200653ABD /* CoreDataManager.swift in Sources */,
+				7D65B2F72CF7B015006467ED /* PaintingDetailView.swift in Sources */,
 				F9C1CE3F2CAF222A00653ABD /* PinturasView.swift in Sources */,
+				7D65B2F92CF7B03D006467ED /* Painting.swift in Sources */,
 				F9C1CE412CAF224E00653ABD /* MapaView.swift in Sources */,
 				F9B713B42CAC9037007C719D /* CreateAccountView.swift in Sources */,
+				7D65B2F52CF7B005006467ED /* PaintingsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,26 +3,51 @@ import SwiftUI
 struct ContentView: View {
     @Binding var isLoggedin: Bool
     @State private var selectedTab = 0
-
+    @State private var paintings: [Painting] = []
+    private let paintingService = PaintingsService()
+//Yoset*1998
     var body: some View {
         ZStack {
             Color(red: 247/255, green: 236/255, blue: 216/255, opacity: 1)
                 .ignoresSafeArea()
 
             TabView(selection: $selectedTab) {
-                // Home Tab
+                // Home Tab (con lista de pinturas)
                 NavigationView {
-                    HomeView(isLoggedin: $isLoggedin)
-                        .navigationTitle("Home")
-                        .navigationBarTitleDisplayMode(.inline)
-                        .toolbar {
-                            ToolbarItem(placement: .navigationBarTrailing) {
-                                Button("Logout") {
-                                    isLoggedin = false
+                    List(paintings) { paint in
+                        NavigationLink(destination: PaintingDetailView(painting: paint)) {
+                            HStack {
+                                AsyncImage(url: URL(string: paint.image)) { image in
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 50, height: 50)
+                                        .clipShape(Circle())
+                                } placeholder: {
+                                    ProgressView()
                                 }
-                                .foregroundColor(.blue)
+                                VStack(alignment: .leading) {
+                                    Text("\(paint.painting) by \(paint.artist)")
+                                        .font(.headline)
+                                    Text("\(paint.dateOfSale)")
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
+                                }
                             }
                         }
+                    }
+                    .navigationTitle("Paintings")
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button("Logout") {
+                                isLoggedin = false
+                            }
+                            .foregroundColor(.blue)
+                        }
+                    }
+                    .onAppear {
+                        fetchPaintings()
+                    }
                 }
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
@@ -60,6 +85,19 @@ struct ContentView: View {
             .onAppear {
                 // Cambiar el color de los íconos no seleccionados
                 UITabBar.appearance().unselectedItemTintColor = UIColor(red: 209/255, green: 170/255, blue: 101/255, alpha: 1)
+            }
+        }
+    }
+
+    private func fetchPaintings() {
+        paintingService.fetchPaintings { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let paintingResponse):
+                    self.paintings = paintingResponse.data
+                case .failure(let error):
+                    print("Error fetching paintings: \(error)")
+                }
             }
         }
     }
